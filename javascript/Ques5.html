@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Table
+        </title>
+        <script>
+            function getTable(){
+                var no = parseInt(document.getElementById("num").value);
+                for(i=1;i<=10;i++){
+                    res = no * 1;
+                    document.getElementById("mydiv").innerHTML+=no+" * "+i+" = "+res+"<br>";
+                }
+                document.getElementById("num").value="";
+            }
+        </script>
+    </head>
+    <body>
+        Number : <input type="number" name="num" id="num" required autofocus>
+        <br><br>
+        <button type="button" name="btn" id="btn" onclick="getTable()">Get Table</button>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

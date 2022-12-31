@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Appointment
+        </title>
+        
+        </head>
+        <script>
+            function msg() {
+                document.getElementById("mydiv").innerHTML="Data Submitted Successfully....!!!!";
+            }
+        </script>
+    <body>
+        
+        <h1>Appointment Scheduler</h1>
+        <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+             <span>Name</span><br>
+            <input type="text" name="name" id="nm" placeholder="Enter Name" required minlength="3" maxlength="10">
+            <br>
+            <br>
+            <span>Telephone number</span><br>
+            <input type="number" name="tel" id="tel" min="10" required pattern="[0-9]*">
+            <br><br>
+            <span>E-mail address</span><br>
+            <input type="email" name="email" id="id"><br><br>
+            <span>Date of birth</span><br>
+            <input type="date" name="dob" id="dob"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Appointment Request</legend>
+            <span>What is the reason for your visit </span><br>
+            <textarea rows="1" placeholder="Select or type your reason"></textarea><br>
+            <br>
+            <span>Current pain level</span><br>
+            <input type="range" name="rg" id="rg" min="1" max="10"><br><br>
+            <span>Preferred date</span><br>
+            <input type="date" name="dt" id="dt"><br><br>
+            <span>Preferred time</span><br>
+            <input type="time" name="ti" id="ti"><br><br>
+        </fieldset>
+        <br>
+        <button type="submit" onclick="msg()" name="btn" id="btn">Submit</button>
+        <div id="mydiv"></div>
+    </form>
+    </body>
+</html>

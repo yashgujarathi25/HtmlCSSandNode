@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+           Message n Times 
+        </title>
+        <script>
+            function print(){
+                var msg =  document.getElementById("nm").value;
+                var num = document.getElementById("num").value;
+                for(var i =0 ; i<num; i++){
+                    document.getElementById("mydiv").innerHTML+=msg+"<br>";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        Text : <input type="text" name="nm" id="nm" autofocus><br><br>
+        Number : <input type="number" name="num" id="num"><br><br>
+        <button type="button" name="btn"  id="btn" onclick="print()">Print</button>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

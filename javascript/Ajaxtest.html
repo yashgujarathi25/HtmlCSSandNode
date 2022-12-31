@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Ajax Test
+        </title>
+        <script>
+            var xhr= null;
+            function displayTable(arr){
+                str = "<table border='2'><tr><th>Id</th><th>user id</th><th>title</th><th>body</th></tr>";
+            for (ob of arr) {
+                str = str + "<tr><td>" + ob.id + "</td><td>" + ob.userId + " </td><td>" + ob.title + "</td><td>" + ob.body + "</td></tr>";
+            }
+            str = str + "</table>";
+            //alert(str);
+            document.getElementById("mydiv").innerHTML += str;
+            }
+            function getxhrobject(){
+                if(window.XMLHttpRequest){
+                    xhr = new XMLHttpRequest();
+                } else 
+                {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+
+            function sendRequest(){
+                getxhrobject();
+                var url = "https://jsonplaceholder.typicode.com/posts/";
+                xhr.open("GET",url,true);
+                xhr.onreadystatechange = function(){
+                    alert("ready state : "+xhr.readyState+"======= status : " +xhr.status)
+                    if(xhr.readyState===4 && xhr.status===200){
+                        console.log(xhr.responseText);
+                        jsondata = xhr.responseText;
+                        javascriptdata = JSON.parse(jsondata);
+                        displayTable(javascriptdata);
+                    }
+                }
+                xhr.send();
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="../Screenshot 2022-12-02 182619.png" height="200px" width="300px">
+            <h1>
+                none of your business
+            </h1>
+        </div>
+        <button type="button" name="btn" id="btn" onclick="sendRequest()">send request</button>
+        <p id="mydiv" style="width: 100%;"></p>
+    </body>
+</html>

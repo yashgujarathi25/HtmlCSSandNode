@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            Power
+        </title>
+        <script>
+            function pow(x,y){
+                var res=1;
+                for(i=0;i<y;i++)
+                {
+                    res=res*x;
+                }
+                document.getElementById("mydiv").innerHTML=res;
+            }
+            function display(){
+                var a = parseInt(document.getElementById("xx").value);
+                var b = parseInt(document.getElementById("yy").value);
+                pow(a,b);
+            }
+        </script>
+    </head>
+    <body>
+        X : <input type="number" name="xx" id="xx" autofocus>
+        <br><br>
+        Y : <input type="number" name="yy" id="yy">
+        <br><br>
+        <button type="button" name="cal" id="cal" onclick="display()">Calculate</button>
+        <div id="mydiv"></div>
+    </body>
+</html>

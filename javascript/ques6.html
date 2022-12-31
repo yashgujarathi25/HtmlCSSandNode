@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Sum of Digit
+        </title>
+        <script>
+            function sum1(){
+                alert("ok");
+                var no = parseInt(document.getElementById("num").value);
+                var summ=0;
+                while(no>0){
+                    rem = parseInt(no%10);
+                    no = parseInt(no/10);
+                    summ=summ+rem;
+                }
+                document.getElementById("mydiv").innerHTML="Sum is "+summ;
+                document.getElementById("num").value="";
+            }
+            function sum(event){
+                console.log(event)
+                if(event.which == 13) {
+                    sum1();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Number : <input type="text" pattern="[0-9]" name="num" id="num" maxlength="5" minlength="5"  onkeypress="sum(event)" autofocus>
+        <br>
+        <br>    
+
+        <div id="mydiv" >
+
+        </div>
+    </body>
+</html>

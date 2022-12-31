@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <title>
+        Test Form
+    </title>
+    <script>
+        function displayContent() {
+            alert("oktest");
+            var fname = document.getElementById("nm").value;
+            var sta = document.getElementsByName("mstatus");
+            var addr = document.getElementById("ta1").value;
+            var el = document.getElementById("email").value;
+            var ch = document.getElementById("sel").value;
+            //var selected = ch.selectedIndex;
+            var arr = document.getElementsByName("win");
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].checked) {
+                    var op = arr[i].value;
+                }
+            }
+            var v = document.getElementById("mydiv");
+            switch (op) {
+                case "dbf":
+                    for (var i = 0; i < sta.length; i++) {
+                        if (sta[i].checked) {
+                            var ms = sta[i].value;
+                        }
+                    }
+                    v.innerHTML = "Name : " + fname +
+                        "<br>Marriatal Status : " + ms + "<br>Address : " + addr + "<br>" +
+                        "Email : " + el + " <br> Choice : " + ch;
+                    break;
+                case "dnw":
+                    var window1 = window.open("new window");
+                    window1.document.write("Name : " + fname +
+                        "<br>Marriatal Status : " + ms + "<br>Address : " + addr + "<br>" +
+                        "Email : " + el + " <br> Choice : " + ch);
+                    break;
+            }
+            /* for(var i =0; i<arr.length;i++){
+                if(arr[i].checked){
+                    var op=arr[i].value;
+                    // document.getElementById("displaydiv").innerHTML="Name : "+fname+"<br>"Marriatal Status : "+ms+"<br>Address : "+addr+"<br>"+"Email : "+el;
+                    //document.getElementById("displaydiv").innerHTML="Name : "+fname;
+                }
+            var v = document.getElementById("displaydiv");
+            switch (op) {
+                    case dfb:
+                        for (var i = 0; i < sta.length; i++) {
+                            if (sta[i].checked) {
+                                var ms = sta[i].value;
+                            }
+                        }
+                        v.innerHTML = "Name : " + fname +
+                        "<br>Marriatal Status : " + ms + "<br>Address : " + addr + "<br>" +
+                        "Email : " + el + " Choice : " + selected;
+                        break;
+                    case dnw:
+                        break;
+                }
+            } */
+        }
+    </script>
+    <style>
+        .button {
+            background-color: skyblue;
+            border: 3px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+            font-size: 15px;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: white;
+            border: 3px solid skyblue;
+        }
+
+        #div8 {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        table {
+            text-align: left;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        #div7 {
+            margin-bottom: auto;
+        }
+
+        .inp {
+            background-color: skyblue;
+        }
+
+        #div5 {
+            border: 4px solid black;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            width: 20%;
+            font-weight: large;
+            padding: 10px;
+        }
+
+        #div4 {
+            display: flex;
+        }
+
+        #div2 {
+            background-color: skyblue;
+            border: 4px solid black;
+            margin: auto;
+            width: 80%;
+        }
+
+        #div3 {
+            background-color: red;
+            border: 3px solid blue;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 80%;
+        }
+
+        #div6 {
+            border: 4px solid black;
+            margin-left: 40px;
+            width: 65%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(161, 212, 32);">
+    <div id="div1">
+        <form>
+            <div id="div2">
+                <div id="div3">
+                    <h3 style="text-align: center;">ABC Enterprise</h3>
+                </div>
+                <div id="div4">
+                    <div id="div5">
+                        <p style="text-align: left; font-size: 30px;">Welcome to<br>Registration<br>System</p>
+                    </div>
+                    <div id="div6">
+                        <div id="div7">
+                            <table>
+                                <tr>
+                                    <td>Name: </td>
+                                    <td>
+                                        <input class="inp" type="text" name="nm" id="nm" size="20px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marrital Status: </td>
+                                    <td>
+                                        <input class="inp" type="radio" name="mstatus" id="msingle">
+                                        <label class="inp" for="msingle">Single</label>
+                                        <input class="inp" type="radio" name="mstatus" id="mmarried">
+                                        <label class="inp" for="mmarried">Married</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Address:
+                                    </td>
+                                    <td>
+                                        <textarea class="inp" name="ta1" id="ta1" cols="40" rows="3"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Email:
+                                    </td>
+                                    <td>
+                                        <input class="inp" type="email" name="email" id="email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Choice:
+                                    </td>
+                                    <td>
+                                        <select class="inp" name="sel" id="sel">
+                                            <option value="1">--select--</option>
+                                            <option value="news letter">news letter</option>
+                                            <option value="magzines">Magzines</option>
+                                            <option value="blogs">Blogs</option>
+                                            <option value="paper">Paper</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="div8">
+                    <input type="radio" name="win" id="dbf" value="dbf">
+                    <label for="dbf">Display Below Form</label>
+                    <input type="radio" name="win" id="dnw" value="dnw">
+                    <label for="dnw">Display on new page</label>
+                    <br><br>
+                    <button type="button" class="button" name="btn" id="btn1" onclick="displayContent()">
+                        Submit
+                    </button>
+                    <!-- <button type="button" class="button" name="btn" id="btn2" onclick="clearContent()">Clear</button> -->
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <div id="mydiv" style="margin: auto; text-align: center; width: 50%"></div>
+
+
+
+</body>
+
+</html>

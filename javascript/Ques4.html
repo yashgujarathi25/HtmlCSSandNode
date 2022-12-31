@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Arithmetic operation
+        </title>
+        <script>
+            function arithmetic(){
+            var no1 = parseInt(document.getElementById("num1").value);
+            var no2 = parseInt(document.getElementById("num2").value);
+            var op = document.getElementById("sel").value;
+            switch(op){
+                case "+":
+                    var sum = no1 + no2;
+                    document.getElementById("mydiv").innerHTML = `Ans : ${sum}`;
+                    break;
+                case "-":
+                    var dif = no1 - no2;
+                    document.getElementById("mydiv").innerHTML = `Ans : ${dif}`;
+                    break;
+                case "*":
+                    var mul = no1 * no2;
+                    document.getElementById("mydiv").innerHTML = `Ans : ${mul}`;
+                    break;
+                case "/":
+                    var div = no1 / no2;
+                    document.getElementById("mydiv").innerHTML = `Ans : ${div}`;
+                    break;   
+            }
+            document.getElementById("num1").value="";
+            document.getElementById("num2").value="";
+        }
+        </script>
+    </head>
+    <body>
+        Number 1 : <input type="number" name="num1" id="num1">
+        <br>
+        <br>
+        Number 2 : <input type="number" name="num2" id="num2">
+        <br><br>
+        <select name="sel" id="sel">
+            <option value="1">--select--</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        &nbsp;&nbsp;
+        <button type="button" name="btn" id="btn" onclick="arithmetic()">Calculate</button>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

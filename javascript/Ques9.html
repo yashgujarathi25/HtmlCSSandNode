@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>
+            Compound Interest
+        </title>
+        <script>
+            function calInterest(){
+                var p = parseInt(document.getElementById("pa").value);
+                var n = parseInt(document.getElementById("year").value);
+                var r = parseInt(document.getElementById("int").value);
+                for(i=1;i<=n;i++){
+                var cp = parseInt((p * (1 + (r / 100)))-p);
+            }
+                document.getElementById("mydiv").innerHTML+="-------------------------------------------------<br>";
+                document.getElementById("mydiv").innerHTML+="<h3>Compound Interest</h3><br>";
+                document.getElementById("mydiv").innerHTML+="-------------------------------------------------<br>";
+                document.getElementById("mydiv").innerHTML+="Compound Interest : "+cp;
+                document.getElementById("pa").value="";
+                document.getElementById("year").value="";
+                document.getElementById("int").value="";
+
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            Principal Amount : <input type="number" name="pa" id="pa"><br><br>
+            Years : <input type="number" name="year" id="year"><br><br>
+            Rate of Interest : <input type="number" name="int" id="int"><br><br>
+            <button type="button" name="btn" id="btn" onclick="calInterest()">Calculate Interest</button>
+        </div>
+        <div id="mydiv"></div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

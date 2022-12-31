@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Even Number
+        </title>
+        <script>
+            function evenNum(){
+            var num = document.getElementById("num").value;
+            for(i=0; i<=num ;i++){
+                if(i%2==0){
+                    document.getElementById("mydiv").innerHTML+= i+" ";
+                }
+            }
+            //document.getElementById("mydiv").innerHTML=""
+            document.getElementById("num").value="";
+        }
+        </script>
+    </head>
+    <body>
+        Number : <input type="number" name="num" id="num">
+        <br><br>
+        <button type="button" name="btn" id="btn" onclick="evenNum()">
+            Even Number
+        </button>  
+        <div id="mydiv">
+
+        </div>     
+    </body>
+</html>

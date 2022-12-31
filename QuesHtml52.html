@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <style>
+            body{
+                background-color: black;
+            }
+            #mydiv{
+                text-align: center ;
+                      }
+            .field{
+                border: 5px solid #3900fe;
+                border-radius: 20px;
+                
+            }
+            .leg{
+                background-color: #3900fe;
+                border: 2px solid #3900fe;
+                border-radius: 6px;
+                color: white;
+
+            }
+            span{
+                background-color:#3900fe; color:white; border: 1px solid #3900fe; border-radius: 3px;
+                padding: 2px;
+                
+
+            }
+            input{
+                background-color: black;
+                color: white;
+            }
+           table td{
+            padding-top: 5px;
+            padding-bottom: 10px;
+           }
+        </style>
+    </head>
+    <body>
+        <div style="width: 40%;">
+        <fieldset name="fi" id="fi" class="field">
+            <legend class="leg">Name and Address</legend>
+            <div id="mydiv">
+            <table>
+                <tr>
+                    <td style="color: white; text-align: right;">
+                        SSN:
+                    </td>
+                    <td>
+                        <input type="text" name="ssn" id="ssn">&nbsp;&nbsp;<span>Fill in name and address</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; text-align: right;" >
+                        Full Name:
+                    </td>
+                    <td>
+                        <input type="text" name="nm" id="nm">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; text-align: right;">
+                        Street and Number:
+                    </td>
+                    <td>
+                        <input type="input" name="san" id="san">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; text-align: right;">
+                        Postal Code
+                    </td>
+                    <td>
+                        <input type="number" name="pc" id="pc" max="6">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; text-align: right;">
+                        City:
+                    </td>
+                    <td>
+                        <input type="text" name="city" id="city">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </fieldset>
+    </div>
+    <br>
+    <div style="width: 30%;">
+        <fieldset class="field">
+            <legend class="leg">Username and password</legend>
+            <table align="center">
+                <tr>
+                    <td style="color: white;">
+                        Username:
+                    </td>
+                    <td>
+                        <input type="text" name="user" id="user">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white;">
+                        Password:
+                    </td>
+                    <td>
+                        <input type="password" name="user" id="user">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="chb" id="chb">
+                        <label for="chb" style="color: white">show password</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    </body>
+</html>
